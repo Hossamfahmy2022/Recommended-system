@@ -12,7 +12,7 @@ def Get_Recommendation(User , dataframe , num_of_recommendations):
 def main():
     st.title("Target Offers")
     User = str(st.text_input("User ID"))
-    num_of_recommendations = int(st.text_input("Num of Recommendations"))
+    num_of_recommendations = st.text_input("Num of Recommendations")
     if st.button("Recommend"):
         Get_Recommendation(User , dataframe , num_of_recommendations)
 
