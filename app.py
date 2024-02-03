@@ -8,7 +8,7 @@ def Get_Recommendation(User , dataframe , num_of_recommendations):
     df_cluster = dataframe[dataframe["Cluster"] == Cluster]
     df_cluster = df_cluster.groupby("product_category_name")["Monetary"].sum().sort_values(ascending = False).head(int(num_of_recommendations))
     for index , name in enumerate(df_cluster.index) : 
-        print(f"Recommendation number {index + 1} is {name}")
+        st.success(f"Recommendation number {index + 1} is {name}")
 def main():
     st.title("Target Offers")
     User = st.text_input("User ID")
